@@ -1,0 +1,118 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+#Camera.fx: 612.813 #3544921875
+#Camera.fy: 612.907  #2265625
+#Camera.cx: 317.438  #1103515625
+#Camera.cy: 248.457  #12280273438
+
+Camera.fx: 617.227
+Camera.fy: 617.478
+Camera.cx: 321.3
+Camera.cy: 241.452
+
+
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+
+Camera.width: 640
+Camera.height: 480
+
+# Camera frames per second 
+Camera.fps: 30.0
+
+# IR projector baseline times fx (aprox.)
+Camera.bf: 49.833290
+#33.704734497
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Close/Far threshold. Baseline times.
+ThDepth: 40
+
+# Deptmap values factor
+DepthMapFactor: 1000
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 2000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500
+
+SaveImgs: 1
+
+
+Seg.Min.Depth: 0.1
+Seg.Max.Depth: 3.5
+Seg.Min.Prob: 0.8
+DynMask.Dilation: 3
+
+Use.SegDepthTh: 0   #0 is false 1 is true
+Use.SegProbTh: 0  
+
+
+#
+#FrozenGraphPath: "/home/richard/tensorflow_testing/model_zoo/xception/frozen_inference_graph.pb"
+#LabelOutputNode: "SemanticPredictions:0"
+#ProbOutputNode: "ResizeBilinear_3:0"
+#Graph.Input.Dim: 513
+#
+# // if mobilenet
+
+FrozenGraphPath: "/home/richard/tensorflow_testing/model_zoo/mobilenet/frozen_inference_graph.pb"
+LabelOutputNode: "SemanticPredictions:0"
+ProbOutputNode: "ResizeBilinear_2:0"
+Graph.Input.Dim: 257
+
+TF.GPU.Fraction: 0.90
+
+Class.Prob.Thresh: 0.75
+PCL.Min.Depth: 1.0
+PCL.Max.Depth: 10.0
+PCL.Min.Prob: 0.75
+PCL.MappingEnabled: 1
+PCL.Label.Interval: 5
+PCL.Use.Simple: 1
+PCL.Remove.BG: 1
+
+PointCloudMapping.Resolution: 0.05
+Use.CloudViewer: 1
+
+Merge.Use.Centroid: 1
+Merge.RadiusFactor: 3
+OD.Use.Remerge: 0
