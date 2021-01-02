@@ -7,6 +7,12 @@ Intel i7-8750H CPU,
 NVIDIA 1060 Max-Q GPU 6GB and
 16GB DDR4 RAM
 
+References
+
+[ORB_SLAM2_SSD_Semantic](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic)
+
+[DynaSLAM](https://github.com/BertaBescos/DynaSLAM)
+
 # 1. Prerequisite and Dependencies
 
 ## 1.1 Ubuntu 16.04 LTS
