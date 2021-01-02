@@ -7,11 +7,15 @@ Intel i7-8750H CPU,
 NVIDIA 1060 Max-Q GPU 6GB and
 16GB DDR4 RAM
 
-References
+References:
 
 [ORB_SLAM2_SSD_Semantic](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic)
 
 [DynaSLAM](https://github.com/BertaBescos/DynaSLAM)
+
+Get the Tensorflow Models from:
+
+[DeepLabv3](https://github.com/tensorflow/models/blob/master/research/deeplab/g3doc/model_zoo.md)
 
 # 1. Prerequisite and Dependencies
 
