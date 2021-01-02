@@ -1,5 +1,7 @@
 # Semantic 3D Mapping for Dynamic Environments
 
+**This repository is not maintained**
+
 This algorithm is built on top of [ORB-SLAM2 RGB-D](https://github.com/raulmur/ORB_SLAM2), it is modified with dynamic point rejection and semantic point cloud reconstruction
 
 The code was tested on a Laptop with:
